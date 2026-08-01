@@ -35,7 +35,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.2.0",
     "@nuxt/eslint-config": "^0.3.10",
-    "@nuxt/module-builder": "^0.6.0",
+    "@nuxt/module-builder": "^0.8.0",
     "@nuxt/schema": "^3.11.2",
     "@nuxt/test-utils": "^3.12.1",
     "@types/locomotive-scroll": "^4.1.3",

@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^0.3.10
     version: 0.3.13(eslint@9.3.0)(typescript@5.4.5)
   '@nuxt/module-builder':
-    specifier: ^0.6.0
-    version: 0.6.0(@nuxt/kit@3.11.2)(nuxi@3.11.1)(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19)
+    specifier: ^0.8.0
+    version: 0.8.4(@nuxt/kit@3.11.2)(nuxi@3.37.0)(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19)
   '@nuxt/schema':
     specifier: ^3.11.2
     version: 3.11.2(rollup@3.29.4)
@@ -1351,21 +1351,23 @@ packages:
       - rollup
       - supports-color
 
-  /@nuxt/module-builder@0.6.0(@nuxt/kit@3.11.2)(nuxi@3.11.1)(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19):
-    resolution: {integrity: sha512-d/sn+6n23qB+yGuItNvGnNlPpDzwcsW6riyISdo4H2MO/3TWFsIzB5+JZK104t0G6ftxB71xWHmBBYEdkXOhVw==}
+  /@nuxt/module-builder@0.8.4(@nuxt/kit@3.11.2)(nuxi@3.37.0)(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19):
+    resolution: {integrity: sha512-RSPRfCpBLuJtbDRaAKmc3Qzt3O98kSeRItXcgx0ZLptvROWT+GywoLhnYznRp8kbkz+6Qb5Hfiwa/RYEMRuJ4Q==}
     hasBin: true
     peerDependencies:
-      '@nuxt/kit': ^3.11.2
-      nuxi: ^3.11.1
+      '@nuxt/kit': ^3.13.1
+      nuxi: ^3.13.1
     dependencies:
       '@nuxt/kit': 3.11.2(rollup@3.29.4)
       citty: 0.1.6
       consola: 3.2.3
       defu: 6.1.4
-      mlly: 1.7.0
-      nuxi: 3.11.1
+      magic-regexp: 0.8.0
+      mlly: 1.8.2
+      nuxi: 3.37.0
       pathe: 1.1.2
-      pkg-types: 1.1.1
+      pkg-types: 1.3.1
+      tsconfck: 3.1.6(typescript@5.4.5)
       unbuild: 2.0.0(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19)
     transitivePeerDependencies:
       - sass
@@ -3255,6 +3257,12 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  /acorn@8.18.0:
+    resolution: {integrity: sha512-lGq+9yr1/GuAWaVYIHRjvvySG5/4VfKIvC8EWxStPdcDh/Ka7FG3twP6v4d5BkravUilhIAsG4Qj83t02LWUPQ==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
   /agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
@@ -3841,6 +3849,10 @@ packages:
 
   /confbox@0.1.7:
     resolution: {integrity: sha512-uJcB/FKZtBMCJpK8MQji6bJHgu1tixKPxRLeGkNzBoOZzpnZUJm0jm2/sBDWcuBx1dYgxV4JU+g5hmNxCyAmdA==}
+
+  /confbox@0.1.8:
+    resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
+    dev: true
 
   /consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
@@ -5787,6 +5799,18 @@ packages:
     dependencies:
       yallist: 3.1.1
 
+  /magic-regexp@0.8.0:
+    resolution: {integrity: sha512-lOSLWdE156csDYwCTIGiAymOLN7Epu/TU5e/oAnISZfU6qP+pgjkE+xbVjVn3yLPKN8n1G2yIAYTAM5KRk6/ow==}
+    dependencies:
+      estree-walker: 3.0.3
+      magic-string: 0.30.10
+      mlly: 1.8.2
+      regexp-tree: 0.1.27
+      type-level-regexp: 0.1.17
+      ufo: 1.5.3
+      unplugin: 1.10.1
+    dev: true
+
   /magic-string-ast@0.6.1:
     resolution: {integrity: sha512-eczKQUDaBpB/mcEqZZNGEUG1FQNsXCuk3uOrCpu6y7qTygIy6jnpqDa62j9MGKSoqlXhM1lCFQv1THuGDQtvUA==}
     engines: {node: '>=16.14.0'}
@@ -6012,10 +6036,10 @@ packages:
       fs-extra: 11.2.0
       globby: 14.0.1
       jiti: 1.21.0
-      mlly: 1.7.0
+      mlly: 1.8.2
       mri: 1.2.0
       pathe: 1.1.2
-      pkg-types: 1.1.1
+      pkg-types: 1.3.1
       postcss: 8.4.38
       postcss-nested: 6.0.1(postcss@8.4.38)
       sass: 1.77.2
@@ -6031,6 +6055,15 @@ packages:
       pathe: 1.1.2
       pkg-types: 1.1.1
       ufo: 1.5.3
+
+  /mlly@1.8.2:
+    resolution: {integrity: sha512-d+ObxMQFmbt10sretNDytwt85VrbkhhUA/JBGm1MPaWJ65Cl4wOgLaB1NYvJSZ0Ef03MMEU/0xpPMXUIQ29UfA==}
+    dependencies:
+      acorn: 8.18.0
+      pathe: 2.0.3
+      pkg-types: 1.3.1
+      ufo: 1.6.4
+    dev: true
 
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -6373,6 +6406,12 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+    dev: true
+
+  /nuxi@3.37.0:
+    resolution: {integrity: sha512-jabJ/DA3Jw4SlCCx4Ha+kENObP4ouyTPYQweU1T+53QaLb3odHG9RaJGMm2zh8Kb4PdKIECAZkucVM83fQoRoA==}
+    engines: {node: ^16.10.0 || >=18.0.0}
+    hasBin: true
     dev: true
 
   /nuxt@3.11.2(@opentelemetry/api@1.8.0)(@types/node@20.12.12)(@unocss/reset@0.60.3)(eslint@9.3.0)(floating-vue@5.2.2)(rollup@3.29.4)(sass@1.77.2)(typescript@5.4.5)(unocss@0.60.3)(vite@5.2.11)(vue-tsc@2.0.19):
@@ -6793,6 +6832,10 @@ packages:
   /pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
 
+  /pathe@2.0.3:
+    resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
+    dev: true
+
   /pathval@1.1.1:
     resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
     dev: true
@@ -6818,6 +6861,14 @@ packages:
       confbox: 0.1.7
       mlly: 1.7.0
       pathe: 1.1.2
+
+  /pkg-types@1.3.1:
+    resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
+    dependencies:
+      confbox: 0.1.8
+      mlly: 1.8.2
+      pathe: 2.0.3
+    dev: true
 
   /pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
@@ -8328,6 +8379,20 @@ packages:
       typescript: 5.4.5
     dev: true
 
+  /tsconfck@3.1.6(typescript@5.4.5):
+    resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
+    engines: {node: ^18 || >=20}
+    deprecated: unmaintained
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.4.5
+    dev: true
+
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
@@ -8380,6 +8445,10 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
+  /type-level-regexp@0.1.17:
+    resolution: {integrity: sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==}
+    dev: true
+
   /typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
@@ -8388,6 +8457,10 @@ packages:
 
   /ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
+
+  /ufo@1.6.4:
+    resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
+    dev: true
 
   /ultrahtml@1.5.3:
     resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
@@ -8418,9 +8491,9 @@ packages:
       jiti: 1.21.0
       magic-string: 0.30.10
       mkdist: 1.5.1(sass@1.77.2)(typescript@5.4.5)(vue-tsc@2.0.19)
-      mlly: 1.7.0
+      mlly: 1.8.2
       pathe: 1.1.2
-      pkg-types: 1.1.1
+      pkg-types: 1.3.1
       pretty-bytes: 6.1.1
       rollup: 3.29.4
       rollup-plugin-dts: 6.1.1(rollup@3.29.4)(typescript@5.4.5)
